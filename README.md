@@ -8,6 +8,7 @@
   意为ass 24(to four) 仅需要结尾命名为`chseng`的ass文件即可批量进行转换四字幕操作
 
 **环境**
+---
 ```
 pip install opencc-python-reimplemented
 ```
@@ -15,7 +16,7 @@ pip install opencc-python-reimplemented
 pip install pyfiglet
 ```
 **使用**
-
+---
 如 `python ass24.py -i d:/test`
 
 `-i`指**输入路径** 如果不填写则为当前路径
@@ -33,12 +34,13 @@ pip install pyfiglet
 批量将hdr和dv视频转为dv兼容hdr视频
 
 **环境**
+---
 `ffmpeg` `dvtool` `mkverge` `hdr10plus_tool`
 ```
 pip install pyfiglet
 ```
 **使用**
-
+---
 如 `python dvhdrplus.py -i d:/test -o d:/output -m dvhdr -f 24000/1001p`
 
 `-i`指**输入路径** 如果不填写则为当前路径 
@@ -61,11 +63,13 @@ pip install pyfiglet
 批量将 **sup** 字幕封装进 **mkv** 视频 且命名为对应的轨道
 
 **环境**
+---
 `mkverge`
 ```
 pip install pyfiglet
 ```
 **使用**
+---
 如 `python sup.py -i d:/test -o d:/out -n Hijack -m movie -t tx`
 
 `-i`指**输入路径**(要求目录下**只允许有**转换的视频和sup文件 否则可能会报错) 如果不填写则为当前路径 
