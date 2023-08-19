@@ -62,6 +62,9 @@ pip install pyfiglet
 
 **环境**
 `mkverge`
+```
+pip install pyfiglet
+```
 **使用**
 如 `python sup.py -i d:/test -o d:/out -n Hijack -m movie -t tx`
 
