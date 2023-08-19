@@ -4,7 +4,8 @@
 # ass24
 <details>
 <summary><b>说明</b></summary>
-意为ass 24(to four) 仅需要结尾命名为`chseng`的ass文件即可批量进行转换四字幕操作
+
+  意为ass 24(to four) 仅需要结尾命名为`chseng`的ass文件即可批量进行转换四字幕操作
 
 **环境**
 ```
