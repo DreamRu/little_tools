@@ -28,8 +28,8 @@ def process_ass_file(file_path):
             line = re.sub(r'\\N.*$', '', line)
         if found_events and ',chsHDR,' in line:
             line = re.sub(r'\\N.*$', '', line)            
-        if found_events and ',LRCeng,' in line:
-            continue
+        if found_events and ',LRC,' in line:
+            line = re.sub(r'\\N.*$', '', line) 
         if found_events and ',chs,' in line:
             line = line.replace(',chs,', ',chs1,')
         if found_events and ',tip,' in line:
