@@ -51,9 +51,9 @@ pip install pyfiglet
 
 `-f`指**输出视频的帧率**如果不填写默认为24000/1001p
 
-如果模式为`hdr10plus`则检索目录下命名含有**hdr10plus,hdr10+**的**mp4**和**mkv**文件
+如果模式为`hdr10plus`则检索目录下命名含有**hdr10plus,hdr10+**的**mp4**和**mkv**文件 且需要修改第**99**行hdr10plus的[json](https://github.com/quietvoid/dovi_tool)文件路径 输出命名修改参照第**120**行
 
-如果模式为`dvhdr`则检索目录下命名含有**dv**与**hdr10/hdr10+**(除dv和hdr10部分其他命名需**保持一致**)的**mp4**和**mkv**文件
+如果模式为`dvhdr`则检索目录下命名含有**dv**与**hdr10/hdr10+**(除dv和hdr10部分其他命名需**保持一致**)的**mp4**和**mkv**文件 输出命名修改参照第**228**行
 </details>
 
 # sup
