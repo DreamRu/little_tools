@@ -75,9 +75,9 @@ for filename in os.listdir(folder_path):
 
         for line in lines:
             # 判断是否包含特定字符串，如果包含则不进行转换
-            if any(substring in line for substring in ["\\fn方正少儿_GBK", "\\fn方正启体_GBK", '\\fn方正少儿繁体', '\\fn素材集市社会体', '\\fn方正苏新诗古印宋 简', '\\fn条幅黑体']):
+            if any(substring in line for substring in ["\\fn方正少儿_GBK", "\\fn方正启体_GBK", '\\fn方正少儿繁体', '\\fn素材集市社会体', '\\fn方正苏新诗古印宋 简', '\\fn条幅黑体', '\\fn方正美黑_GBK', '\\fn方正美黑繁体']):
                 # 替换
-                line = line.replace('\\fn方正少儿_GBK', '\\fn方正少儿繁体').replace('\\fn条幅黑体', '\\fn方正大黑_GBK')
+                line = line.replace('\\fn方正少儿_GBK', '\\fn方正少儿繁体').replace('\\fn条幅黑体', '\\fn方正大黑_GBK').replace('\\fn方正美黑_GBK', '\\fn方正美黑繁体')
                 converted_lines.append(line)
                 continue
 
