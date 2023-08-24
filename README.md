@@ -35,7 +35,7 @@ pip install pyfiglet
 
 **环境**
 ---
-`ffmpeg` `dvtool` `mkverge` `hdr10plus_tool`
+`ffmpeg` `dvtool` `mkvmerge` `hdr10plus_tool`
 ```
 pip install pyfiglet
 ```
@@ -64,7 +64,7 @@ pip install pyfiglet
 
 **环境**
 ---
-`mkverge`
+`mkvmerge`
 ```
 pip install pyfiglet
 ```
