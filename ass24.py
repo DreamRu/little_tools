@@ -14,45 +14,46 @@ args = arguments.parse_args()
 
 folder_path = args.folder_path or os.getcwd()
 
-def process_ass_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        lines = file.readlines()
-
-    updated_lines = []
-    found_events = False
-
-    for line in lines:
-        if '分隔行' in line:
-            found_events = True
-        if found_events and ',chs,' in line:
-            line = re.sub(r'\\N.*$', '', line)
-        if found_events and ',chsHDR,' in line:
-            line = re.sub(r'\\N.*$', '', line)            
-        if found_events and ',LRC,' in line:
-            line = re.sub(r'\\N.*$', '', line) 
-        if found_events and ',chs,' in line:
-            line = line.replace(',chs,', ',chs1,')
-        if found_events and ',tip,' in line:
-            line = line.replace(',tip,', ',tip1,')
-        if found_events and ',Yingzimu,' in line:
-            line = line.replace(',Yingzimu,', ',Yingzimu1,')  
-        if found_events and ',chsHDR,' in line:
-            line = line.replace(',chsHDR,', ',1chsHDR,')         
-        updated_lines.append(line)
-
-    # 获取输入文件名并修改输出文件名
-    input_filename = os.path.basename(file_path)
-    output_filename = input_filename.replace('chseng', 'chs')
-    output_file_path = os.path.join(folder_path, output_filename)
-
-    with open(output_file_path, 'w', encoding='utf-8') as file:
-        file.writelines(updated_lines)
-
 # 遍历当前目录下的所有文件和文件夹
 for filename in os.listdir(folder_path):
-    # 判断文件是否是以 .ass 结尾
+    # 判断文件是否是以 .ass 结尾且包含 'chseng' 或 'chs' 字样
     if filename.endswith(".ass"):
         file_path = os.path.join(folder_path, filename)
+
+        def process_ass_file(file_path):
+            with open(file_path, 'r', encoding='utf-8') as file:
+                lines = file.readlines()
+
+            updated_lines = []
+            found_events = False
+
+            for line in lines:
+                if '分隔行' in line:
+                    found_events = True
+                if found_events and ',chs,' in line:
+                    line = re.sub(r'\\N.*$', '', line)
+                if found_events and ',chsHDR,' in line:
+                    line = re.sub(r'\\N.*$', '', line)            
+                if found_events and ',LRC,' in line:
+                    line = re.sub(r'\\N.*$', '', line)
+                if found_events and ',chs,' in line:
+                    line = line.replace(',chs,', ',chs1,')
+                if found_events and ',tip,' in line:
+                    line = line.replace(',tip,', ',tip1,')
+                if found_events and ',Yingzimu,' in line:
+                    line = line.replace(',Yingzimu,', ',Yingzimu1,')  
+                if found_events and ',chsHDR,' in line:
+                    line = line.replace(',chsHDR,', ',1chsHDR,')         
+                updated_lines.append(line)
+
+            # 获取输入文件名并修改输出文件名
+            input_filename = os.path.basename(file_path)
+            output_filename = input_filename.replace('chseng', 'chs')
+            output_file_path = os.path.join(folder_path, output_filename)
+
+            with open(output_file_path, 'w', encoding='utf-8') as file:
+                file.writelines(updated_lines)
+
         process_ass_file(file_path)
 
 
