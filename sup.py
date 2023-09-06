@@ -87,7 +87,7 @@ for file in files:
 for episode, categories in file_groups.items():
   if title == "tx":
       # sdr*4 hdr*4
-      if "sdr.chseng" in categories and "sdr.chteng" in categories and "video"  in categories and "hdr.chseng" in categories and "hdr.chteng" in categories and "hdr.cht" in categories and "hdr.chs" in categories and "sdr.chteng" in categories and "sdr.chseng" in categories:
+      if "sdr.chseng" in categories and "sdr.chteng" in categories and "video"  in categories and "hdr.chseng" in categories and "hdr.chteng" in categories and "hdr.cht" in categories and "hdr.chs" in categories and "sdr.cht" in categories and "sdr.chs" in categories:
         sdr_chseng_files = " ".join(categories["sdr.chseng"])
         sdr_chteng_files = " ".join(categories["sdr.chteng"])
         hdr_chseng_files = " ".join(categories["hdr.chseng"])
@@ -503,7 +503,7 @@ for episode, categories in file_groups.items():
    
   else:
       # sdr*4 hdr*4
-      if "sdr.chseng" in categories and "sdr.chteng" in categories and "video"  in categories and "hdr.chseng" in categories and "hdr.chteng" in categories and "hdr.cht" in categories and "hdr.chs" in categories and "sdr.chteng" in categories and "sdr.chseng" in categories:
+      if "sdr.chseng" in categories and "sdr.chteng" in categories and "video"  in categories and "hdr.chseng" in categories and "hdr.chteng" in categories and "hdr.cht" in categories and "hdr.chs" in categories and "sdr.cht" in categories and "sdr.chs" in categories:
         sdr_chseng_files = " ".join(categories["sdr.chseng"])
         sdr_chteng_files = " ".join(categories["sdr.chteng"])
         hdr_chseng_files = " ".join(categories["hdr.chseng"])
