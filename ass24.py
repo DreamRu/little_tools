@@ -85,7 +85,13 @@ for filename in os.listdir(folder_path):
                                                        '\\fn方正宋黑_GBK', '\\fn方正宋黑繁体', 
                                                        '\\fn方正新舒体_GBK', '\\fn方正新舒体繁体', 
                                                        '\\fn方正行楷_GBK', '\\fn方正行楷繁体', 
-                                                       '\\fn方正中倩_GBK', '\\fn方正中倩繁体']):
+                                                       '\\fn方正中倩_GBK', '\\fn方正中倩繁体',
+                                                       '\\fn方正硬笔行书_GBK', '\\fn方正硬笔行书繁体',
+                                                       '\\fn方正启体_GBK', '\\fn方正启体繁体',
+                                                       '\\fn方正毡笔黑_GBK', '\\fn方正毡笔黑繁体',
+                                                       '\\fn方正康体_GBK', '\\fn方正康体繁体',
+                                                       '\\fn方正艺黑_GBK', '\\fn方正艺黑繁体',
+                                                       '\\fn汉仪彩云体简', '\\fn汉仪彩云体繁']):
                 # 替换
                 line = line.replace('\\fn方正少儿_GBK', '\\fn方正少儿繁体') \
                        .replace('\\fn方正美黑_GBK', '\\fn方正美黑繁体') \
@@ -93,7 +99,14 @@ for filename in os.listdir(folder_path):
                        .replace('\\fn方正宋黑_GBK', '\\fn方正宋黑繁体') \
                        .replace('\\fn方正新舒体_GBK', '\\fn方正新舒体繁体') \
                        .replace('\\fn方正行楷_GBK', '\\fn方正行楷繁体') \
-                       .replace('\\fn方正中倩_GBK', '\\fn方正中倩繁体')
+                       .replace('\\fn方正中倩_GBK', '\\fn方正中倩繁体') \
+                       .replace('\\fn方正中倩_GBK', '\\fn方正中倩繁体') \
+                       .replace('\\fn方正硬笔行书_GBK', '\\fn方正硬笔行书繁体') \
+                       .replace('\\fn方正启体_GBK', '\\fn方正启体繁体') \
+                       .replace('\\fn方正毡笔黑_GBK', '\\fn方正毡笔黑繁体') \
+                       .replace('\\fn方正康体_GBK', '\\fn方正康体繁体') \
+                       .replace('\\fn方正艺黑_GBK', '\\fn方正艺黑繁体') \
+                       .replace('\\fn汉仪彩云体简', '\\fn汉仪彩云体繁') 
                 converted_lines.append(line)
                 continue
 
