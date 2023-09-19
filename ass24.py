@@ -44,6 +44,8 @@ for filename in os.listdir(folder_path):
                     line = line.replace(',Yingzimu,', ',Yingzimu1,')  
                 if found_events and ',chsHDR,' in line:
                     line = line.replace(',chsHDR,', ',1chsHDR,')         
+                # if found_events and ',LRC,' in line:
+                #     line = line.replace(',LRC,', ',LRC1,')   
                 updated_lines.append(line)
 
             # 获取输入文件名并修改输出文件名
@@ -76,9 +78,22 @@ for filename in os.listdir(folder_path):
 
         for line in lines:
             # 判断是否包含特定字符串，如果包含则不进行转换
-            if any(substring in line for substring in ["\\fn方正少儿_GBK", "\\fn方正启体_GBK", '\\fn方正少儿繁体', '\\fn素材集市社会体', '\\fn方正苏新诗古印宋 简', '\\fn方正美黑_GBK', '\\fn方正美黑繁体', '\\fn方正宋黑_GBK', '\\fn方正宋黑繁体', '\\fn方正新舒体_GBK', '\\fn方正新舒体繁体', '\\fn方正行楷_GBK', '\\fn方正行楷繁体']):
+            if any(substring in line for substring in ["\\fn方正少儿_GBK", "\\fn方正启体_GBK", 
+                                                       '\\fn方正少儿繁体', '\\fn素材集市社会体', 
+                                                       '\\fn方正苏新诗古印宋 简', 
+                                                       '\\fn方正美黑_GBK', '\\fn方正美黑繁体', 
+                                                       '\\fn方正宋黑_GBK', '\\fn方正宋黑繁体', 
+                                                       '\\fn方正新舒体_GBK', '\\fn方正新舒体繁体', 
+                                                       '\\fn方正行楷_GBK', '\\fn方正行楷繁体', 
+                                                       '\\fn方正中倩_GBK', '\\fn方正中倩繁体']):
                 # 替换
-                line = line.replace('\\fn方正少儿_GBK', '\\fn方正少儿繁体').replace('\\fn方正美黑_GBK', '\\fn方正美黑繁体').replace("\\fn方正启体_GBK", "\\fn方正启体繁体").replace('\\fn方正宋黑_GBK', '\\fn方正宋黑繁体').replace('\\fn方正新舒体_GBK', '\\fn方正新舒体繁体').replace('\\fn方正行楷_GBK', '\\fn方正行楷繁体')
+                line = line.replace('\\fn方正少儿_GBK', '\\fn方正少儿繁体') \
+                       .replace('\\fn方正美黑_GBK', '\\fn方正美黑繁体') \
+                       .replace("\\fn方正启体_GBK", "\\fn方正启体繁体") \
+                       .replace('\\fn方正宋黑_GBK', '\\fn方正宋黑繁体') \
+                       .replace('\\fn方正新舒体_GBK', '\\fn方正新舒体繁体') \
+                       .replace('\\fn方正行楷_GBK', '\\fn方正行楷繁体') \
+                       .replace('\\fn方正中倩_GBK', '\\fn方正中倩繁体')
                 converted_lines.append(line)
                 continue
 
